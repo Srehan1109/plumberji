@@ -1,0 +1,63 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Plumberji</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static '/css/bootstrap.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static '/css/fontawesome.css' %}">
+    <link href="{% static '/css/styles.css' %}" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <div class="container">
+        {% include './includes/header.html' %}
+        {% block register %}
+        {% endblock register %}
+
+        {% block login %}
+        {% endblock login %}
+        <!-- ======== -->
+        {% block home %}
+        {% endblock home %}
+        <!-- ======== -->
+        {% block about %}
+        {% endblock about %}
+        <!-- =======  -->
+        {% block contact %}
+        {% endblock contact %}
+        <!-- =======  -->
+        {% block faqs %}
+        {% endblock faqs %}
+        <!-- =======  -->
+        {% block support %}
+        {% endblock support %}
+        <!-- ======== -->
+        {% block plumberregister %}
+        {% endblock plumberregister %}
+
+        {% block plumberlogin %}
+        {% endblock plumberlogin %}
+        <!-- ======== -->
+        {% block forgotpass %}
+        {% endblock forgotpass %}
+
+        {% block resetpass %}
+        {% endblock resetpass %}
+        {% include './includes/footer.html' %}
+    </div>
+
+
+</body>
+
+</html>

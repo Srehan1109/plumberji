@@ -1,0 +1,104 @@
+.logo-text{
+    color:black;
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.bg-aqua{
+   background-color: #c4f4ff;
+}
+
+/* ====Form==== */
+.form-control{
+    border:none;
+}
+
+/* ==== Icons Class ==== */
+
+ .icons{
+    margin:20px 0px;  
+    /* float: left; */
+    padding: 0.2rem;
+ }
+
+/* ==== Testimonials === */
+
+ @media (max-width:991.98px) {
+     .padding {
+         padding: 1.5rem
+     }
+ }
+
+ @media (max-width:767.98px) {
+     .padding {
+         padding: 1rem
+     }
+ }
+
+ .padding {
+     padding: 5rem
+ }
+
+.card{
+    width: 100% !important;
+}
+ /* .card {
+     position: relative;
+     display: flex;
+     width: 350px;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-color: #fff;
+     background-clip: border-box;
+     border: 1px solid #d2d2dc;
+     border-radius: 11px;
+     margin: 0.2rem;
+ } */
+
+ /* .card .card-body {
+     padding: 1rem 1rem
+ }
+
+ .card-body {
+     flex: 1 1 auto;
+     padding: 1.25rem
+ } */
+
+ p {
+     font-size: 0.875rem;
+     margin-bottom: .5rem;
+     line-height: 1.5rem
+ }
+
+ h4 {
+     line-height: .2 !important
+ }
+
+ .profile {
+     margin-top: 16px;
+     margin-left: 11px
+ }
+
+ .profile-pic {
+     width: 58px
+ }
+
+ .cust-name {
+     font-size: 18px
+ }
+
+ .cust-profession {
+     font-size: 10px
+ }
+
+ .items {
+     width: 90%;
+     margin: 0px auto;
+     margin-top: 100px
+ }
+
+ .slick-slide {
+     margin: 10px
+ }
+
