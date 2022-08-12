@@ -13,7 +13,7 @@ from django.utils.http import urlsafe_base64_decode,urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.core.mail import EmailMessage
 from django.contrib.auth.tokens import default_token_generator
-
+ 
 # Create your views here.
 def register(request):
     if request.method=='POST':
@@ -151,7 +151,9 @@ def resetpassword(request):
 def plumberregister(request):
     if request.method=='POST':
         form=PlumberProfileFrom(request.POST)
+        print(form)
         if form.is_valid():
+
             first_name=form.cleaned_data['first_name']
             last_name=form.cleaned_data['last_name']
             email=form.cleaned_data['email']
@@ -160,10 +162,11 @@ def plumberregister(request):
             password=form.cleaned_data['password']
             # role=form.cleaned_data['role']
             user=PlumberProfile.objects.create_user(first_name=first_name,last_name=last_name,email=email,password=password,username=username)
+            
             user.phone_number=phone_number
             user.save()
             #create a user profile
-            profile=UserProfile()
+            profile=PlumberProfile()
             profile.user_id=user.id
             profile.profile_picture='default/default-user.png'
             profile.save()
@@ -178,6 +181,7 @@ def plumberregister(request):
 
             })
             to_email=email
+            print(to_email)
             send_mail=EmailMessage(mail_subject,message,to=[to_email])
             send_mail.send()
             messages.success(request,"Registration Successful")
@@ -193,20 +197,25 @@ def plumberregister(request):
 def plumberlogin(request):
     if request.method=="POST":
         email=request.POST['email']
+        print(email)
         password=request.POST['password']
         user=auth.authenticate(email=email,password=password)
         if user is not None:
             auth.login(request,user)
             messages.success(request,"You have been successfully logged in")
             return redirect('home')
-
+        else:
+            messages.error(request,'error')
+            return redirect('plumberregister')
     return render(request,'accounts/plumberlogin.html')
 
 
 def plumberactivate(request,uidb64,token):
     try:
         uid=urlsafe_base64_decode(uidb64).decode()
+        print(uid)
         user=PlumberProfile._default_manager.get(pk=uid)
+        print(user)
     except(TypeError,ValueError,OverflowError,PlumberProfile.DoesNotExist):
         user=None
     if user is not None and default_token_generator.check_token(user,token):
