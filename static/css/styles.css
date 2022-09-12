@@ -102,3 +102,32 @@
      margin: 10px
  }
 
+
+ .bg_custm{
+    background: url(../images/tap.jpg) no-repeat center #aaaaf8;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    background-blend-mode: color-burn;
+ }
+
+ .colForm{
+    top: 65%;
+    width: 90%;
+ }
+
+ .top-20{
+    top: 10%;
+ }
+
+ .w-25{
+    max-width:  200px;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+ }
+
+ .approach{
+    text-decoration: none;
+    color: rgb(121, 152, 152) !important;
+ }

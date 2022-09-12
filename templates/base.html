@@ -8,20 +8,20 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Plumberji</title>
+    <link href="{% static './images/leaky-tap.png' %}" rel="shortcut icon" type="image/x-icon">
+    <title>Plumberji-Professional plumbing solutions</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static '/css/bootstrap.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static '/css/fontawesome.css' %}">
     <link href="{% static '/css/styles.css' %}" rel="stylesheet">
-
 </head>
 
 
 <body>
 
-    <div class="container">
-        {% include './includes/header.html' %}
+    {% include './includes/header.html' %}
+    <div class="container-fluid">
         {% block register %}
         {% endblock register %}
 
