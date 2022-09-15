@@ -19,13 +19,13 @@
                 </div>
             </div>
             <!-- Form Start -->
-            <div class="col position-absolute colForm">
+            <div class="col colForm my-5">
                 <div class="bg-light p-5 rounded-3 row row-cols-1 row-cols-lg-2">
                     <div class="col">
-                        <h4 class="fw-bolder">Ask for a Plumber</h4>
+                        <p class="fw-bold">Ask for a Plumber</p>
                         <p class="text-black-50">We are a network of professional plumbers and will help you
-                            from start to finish
-                            with quick and hassle-free plumbing services</p>
+                        from start to finish
+                        with quick and hassle-free plumbing services</p>
                         <form action="" method="post" class="row row-cols-1 row-cols-lg-2 justify-content-center align-items-center">
                             {% csrf_token %}
                             {{form|crispy}}
@@ -33,7 +33,7 @@
                         </form>
                     </div>
                     <div class="col text-center">
-                        <img src="../../static/images/ntap.jpg" class="img-fluid m-auto" width="500" alt="">
+                        <img src="../../static/images/ntap.jpg" class="img-fluid m-auto d-lg-block d-none" width="500" alt="">
                     </div>
                 </div>
             </div>
@@ -69,4 +69,5 @@
     <div class="p-5 container ">
         {% include '../includes/home_cta.html' %}
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 {% endblock home %}

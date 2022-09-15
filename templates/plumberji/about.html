@@ -1,64 +1,186 @@
 {% extends 'base.html' %}
-
-
+{% load static %}
 {% block about %}
-<h1>	•	About Company: </h1>
-<h1 >Plumber Ji has more than N/A years of experience in Plumbing Services.</h1>
-<h2>We take pride in being able to bring out the best solution to your problem in a quick, professional and friendly manner.</h2>
-<p class="mt-5 fs-3">
-    Our lines stand above the competition because of our design, fit, quality and of course, SERVICES. Which make us standout from other plumbing companies.<br><br>
-Here at Plumber Ji, we are able to perform short or long diagnoses, and supply precise Plumbing Service at a competitive value.<br><br> 
-CEO/Founder: (Sign & small photograph)<br><br>
-</p>
-<h3 class="ms-3">	•	Why choose Us:</h3>
-<h4 class="ms-2 mt-3">We are committed to provide you with the utmost in Quality Service</h4>
-<p class=" ms-3 mt-3 fs-4">Our number one priority is providing redoubtable customer service for each and every job, so that you walk away 100% Delighted each and every time.<br><br>
-	1.	The client is for we exist<br>
-	2.	Meet commitments no matter what<br>
-	3.	Take no sidesteps<br>
-	4.	Leave work area squeaky-clean<br>
-	5.	Finish on time<br>
-	6.	Arrive on time<br>
-	7.	Maintain precise records<br>
-    8.  Be truthful</p>
-<h3 class="ms-3 mt-3">	•	Latest Projects:</h3>
-<p class=" ms-3 mt-3 fs-4">In the photos below you'll see examples, not solely of the big selection of labour we've got undertaken within the past however you'll be able to see the standard acquisition provided by our skillful engineers.<br> 
-    1. Residential:  Large Ensuite (attach picture), Bathroom & Physio Room, Small Family Bathroom, Family Bathroom, Stylist Bathroom, Bathroom.<br>
-    2. Commercial: Leak detection & repair (attach picture), water gas piping, drain cleaning & sewer services, water heater repair and installation,etc.
-    </p>
-<h3 class="ms-3 mt-3">	•	Our Team:</h3>
-<h3 class="ms-4 mt-3">Your Professional Plumbing Technicians
-</h3>
-<p class=" ms-3 mt-3 fs-4">Our company is dedicated to providing outstanding customer service backed by years of experience, professionalism and Intelligence.<br>
-    Team member names:<br>
-    For e.g.: Stanley Flakes (Plumber)
-    </p>
-<h3 class="ms-3 mt-3">	•	We work in:</h3>
-<h3 class="ms-4 mt-3">Area’s, We Cover</h3>
-<p class=" ms-3 mt-3 fs-4">Working with a sure company to produce you with plumbing and HVAC services will go an extended manner towards serving to you feel assured within the quality of the pipes, sewer lines, and heating and cooling system in your home or business.<br><br>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" integrity="sha512-ykRBEJhyZ+B/BIJcBuOyUoIxh0OfdICfHPnPfBy7eIiyJv536ojTCsgX8aqrLQ9VJZHGz4tvYyzOM0lkgmQZGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<h1 class="text-info my-2">AboutUs</h1>
+    <div class="container my-2">
+        <div class="row row-cols-1 row-cols-lg-2 justify-content-center align-items-center">
+            <div class="col text-center my-5">
+                <img src="../../static/images/about_us.jpg" class="img-fluid cs_img" alt="" srcset="">
+            </div>
+            <div class="col">
+                <h2 class="text-info">	About Company: </h2>
+                <h3 class="faq_title">Plumber Ji has more than N/A years of experience in Plumbing Services.</h3>
+                <h5 class="faq_title my-3">We take pride in being able to bring out the best solution to your problem in a quick, professional and friendly manner.</h5>
+                <p class="mt-4 fs-5 text-muted ">
+                Our lines stand above the competition because of our design, fit, quality and of course, SERVICES. Which make us standout from other plumbing companies.<br>
+                Here at Plumber Ji, we are able to perform short or long diagnoses, and supply precise Plumbing Service at a competitive value.</p>
+                </p>
+            </div>
+        </div>
+    </div> 
+    <div class="container">
+        <h3 class="my-3 text-info">	Why choose Us:</h3>
+                <p class="h4 faq_title">We are committed to provide you with the utmost in Quality Service</p>
+                <p class="mt-3 fs-4">Our number one priority is providing redoubtable customer service for each and every job, so that you walk away 100% Delighted each and every time.<br><br>
+            
+            <div class="row row-cols-1 my-4">  
+                
+                    <p class="fs-5 faq_title">1.	The client is for we exist</p>
+                    <p class="fs-5 faq_title">2.	Meet commitments no matter what</p>
+                    <p class="fs-5 faq_title">3.	Take no sidesteps</p>
+                    <p class="fs-5 faq_title">4.	Leave work area squeaky-clean</p>
+                    <p class="fs-5 faq_title">5.	Finish on time</p>
+                    <p class="fs-5 faq_title">6.	Arrive on time<br></p>
+                    <p class="fs-5 faq_title">7.	Maintain precise records</p>
+                    <p class="fs-5 faq_title">8.  Be truthful</p>
+            </div>        
+                
+    </div>
+    <div class="container">     
+    <h2 class="mt-3 text-info my-4">	Latest Projects:</h2>
+    <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col">
+            <h1 class="faq_title mt-4 ms-5">Our Portfolio & Gallery</h1>
+        </div>
+        <div class="col">
+            <p class="mt-2 fs-6 me-5">In the photos below you'll see examples, not solely of the big selection of labour we've got undertaken within the past however you'll be able to see the standard acquisition provided by our skillful engineers.<br>
+        </div>
+    </div>
+    <h2 class="text-info my-3">Residential:</h2>
+        <div class="row row-cols-1 row-cols-lg-3">
+            
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../../static/images/large ensuite.jpg" class="card-img-top img-fluid drain_img" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Large Ensuite</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../../static/images/new_bathroom.jpg" class="card-img-top img-fluid drain_img" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Family Bathroom </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../../static/images/small_bathroom.jpg" class="card-img-top img-fluid drain_img" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Small Family Bathroom </p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <h2 class="text-info my-3">Commercial:</h2>
+        <div class="row row-cols-1 row-cols-lg-3">
+            
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../../static/images/repair.jpg" class="card-img-top img-fluid drain_img" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Leak Detection & Repair</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../../static/images/piping.jpg" class="card-img-top img-fluid drain_img" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Water Gas Piping</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="../../static/images/drain.jpg" class="card-img-top img-fluid drain_img" alt="...">
+                    <div class="card-body">
+                      <p class="card-text text-center">Drain Cleaning</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
+    </div> 
 
-    All Location-(Button)<br><br></p>
-<h3 class="ms-4 mt-3">Locations:</h3>
-<h3 class="ms-4 mt-3">For e.g.: Delaware, Pennsylvania. (Area, City)</h3>
-<h3 class="ms-3 mt-3">	•	Reviews from Our Satisfied Customers</h3>
-<h3 class="ms-4 mt-3">Hear what our happy customers ought to say regarding Plumber Ji. Our plumbing contractors are fully fledged, reliable, and skilled.</h3>
-<p class=" ms-4 mt-4 fs-4">	1.	Called for someone to come out to take a look at a leak under my sidewalk next to my house/front door. Two gentlemen came out of time, quickly diagnosed the problem, and gave me information about the fix.<br>
-    ---Harsith Mehra, Supervisor.<br><br>
-       2.	Service was great! The plumber was extremely helpful and courteous. He fixed my issues quickly and was very respectful of my time constraints with another appointment. I appreciate help!<br> 
-   --- Kanan Das, Homeowner.</p>
-<h3 class="ms-3 mt-3">	•	Share Your Review:</h3>
-<h3 class="mt-3">Review Form</h3>
-<p class="fs-4">
-    Your name<br>
-Email<br>
-Phone<br>
-Review<br>
-         Send Review (Button)
-</p>
-<h3 class="ms-3 mt-3">	•	Contacts detail:</h3>
-<p class="fs-4">
-    1. Work Space<br>
-2. Phone Number<br>
-3. Working Hours<br>
-</p>
+
+    <div class="container">   
+        <h3 class="mt-3 text-info">Our Team:</h3>
+        <h1 class="mt-3 faq_title text-center">Your Professional Plumbing<br> Technicians
+        </h1>
+        <p class="mt-3 fs-5 text-center">Our company is dedicated to providing outstanding customer service<br> backed by years of experience, professionalism and Intelligence.</p>
+
+        <div class="row row-cols-1 row-cols-lg-3 justify-content-center align-items-center mt-5">
+            <div class="col text-center">
+                <img src="../../static/images/john.jpg" class="img-fluid team_img" alt="" srcset="">
+                <p class="my-2 fw-bold fs-5 faq_title">John Ridenour</p>
+                <small>Plumber</small>
+            </div>
+            <div class="col text-center">
+                <img src="../../static/images/richard.jpg" class="img-fluid team_img" alt="" srcset="">
+                <p class="my-2 fw-bold fs-5 faq_title">Richard Thomas</p>
+                <small>Plumber</small>
+            </div>
+            <div class="col text-center">
+                <img src="../../static/images/stanley.jpg" class="img-fluid team_img" alt="" srcset="">
+                <p class="my-2 fw-bold fs-5 faq_title">Stanley Flakes</p>
+                <small>Plumber</small>
+            </div>
+        </div>
+            
+    </div>
+
+
+<div class="container">
+    <h4 class="mt-3 text-info my-4">We work in:</h4>
+    <h2 class="mt-3 faq_title my-4">Area’s, We Cover</h2>
+    <div class="row row-col-1 row-cols-lg-2">
+        <div class="col px-5">
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Mumbai,<span class="text-muted">Maharashtra</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow  text-warning"></i> &nbsp;&nbsp; Chandigarh,<span class="text-muted">Punjab</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Surat,<span class="text-muted">Gujrat</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Pune,<span class="text-muted">Maharashtra</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Shimla,<span class="text-muted">Himachal Pradesh</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Imphal,<span class="text-muted">Manipur</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Panaji,<span class="text-muted">Goa</span></p>
+        </div>
+        <div class="col px-5">
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Patna,<span class="text-muted">Bihar</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Lucknow,<span class="text-muted">Uttar Pradesh</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Ahmedabad,<span class="text-muted">Gujrat</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Jodhpur,<span class="text-muted">Rajastan</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Hyderabad,<span class="text-muted">Telangana</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Nashik,<span class="text-muted">Maharashtra</span></p>
+            <p class="faq_title fs-5 fw-bold  my-2"><i class="fas fa-location-arrow text-warning"></i> &nbsp;&nbsp; Kolkata<span class="text-muted">West Bengal </span></p>
+        </div>
+    </div>
+
+    <p class="mt-3 fs-5 text-muted">Working with a sure company to produce you with plumbing and HVAC services will go an extended manner towards serving to you feel assured within the quality of the pipes, sewer lines, and heating and cooling system in your home or business.</p>
+    <button class="faq_btn my-2">All Locations</button>
+</div>
+<div class="container my-4">
+    <h3 class="text-info">Location</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.3349049550893!2d73.02568585540578!3d19.16592548703639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bf6d0e5de581%3A0x7f901b6aed80537b!2sKausa%20Vegetable%20Market!5e0!3m2!1sen!2sin!4v1650268737044!5m2!1sen!2sin" style="width: 100%;" height="250" style="border:1px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="row row-cols-1 row-cols-lg-3 justify-content-between">
+        <div class="col bg-light">
+            <h5 class="faq_title text-center">Head Office</h5>
+            <p class="text-center">8494 Signal Hill Road Manassas,va,<br>20110</p>
+        </div>
+        <div class="col bg-light ">
+            <h5 class="faq_title text-center">Phone Numbers:</h5>
+            <h4 class="text-center text-warning">123 456 789</h4>
+            <p class="text-center">Emergency</p>
+        </div>
+        <div class="col bg-light">
+            <h5 class="faq_title text-center">Working Time:</h5>
+            <p class="text-center">24 Hour Service - 7 Days a Wee365 Days</p>
+        </div>
+    </div>
+
+    
+
+</div>
 {% endblock about %}
