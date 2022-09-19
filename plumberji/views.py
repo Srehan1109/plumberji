@@ -18,8 +18,8 @@ from twilio.rest import Client
 
 
 def home(request):
-    account_sid = "AC1cf633e6cca828606205d8d189497329"  
-    auth_token = "c5780c876e5ea75954639bc1d58172a7"
+    account_sid = "AC13a27bfe95d8a0020859a9f9804be6a5"  
+    auth_token = "1799f4650b826d345383c864237929cb"
     client = Client(account_sid,auth_token)
     print(client)
     if request.method == 'POST':
@@ -38,7 +38,7 @@ def home(request):
             #print(job_to_be_done)
             current_site=get_current_site(request)
             mail_subject="test email"
-            message="hi rehan here"
+            message="Hii Your Complain have register"
           
             to_email=email_user
             send_mail=EmailMessage(mail_subject,message,to=[to_email])
@@ -47,8 +47,8 @@ def home(request):
             #sms feature
             message = client.messages.create(
                                     body="hii this is your appointment",
-                                    from_="+19786482062",
-                                    to="+919892932668",
+                                    from_="+16187597644",
+                                    to=sms_user,
                                 )
             print('===============',message)
             print("message sent successfully")       
