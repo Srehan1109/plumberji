@@ -1,6 +1,12 @@
+from random import choices
 from django import forms
 from .models import Account, UserProfile,PlumberProfile
 class RegistrationForm(forms.ModelForm):
+
+    first_name=forms.CharField(widget=forms.TextInput(attrs={
+        'class':'form-control',
+        'placeholder':'Enter Name',
+    }))
     password=forms.CharField(widget=forms.PasswordInput(attrs={
         'class':'form-control',
         'placeholder':'Enter Password',
@@ -12,7 +18,7 @@ class RegistrationForm(forms.ModelForm):
     
     class Meta:
         model=Account
-        fields=['first_name','last_name','phone_number','email','password']
+        fields=['role','first_name','last_name','email','phone_number','password']
 
     def __init__(self,*args,**kwargs):
         super(RegistrationForm,self).__init__(*args,**kwargs)
@@ -67,6 +73,22 @@ class UserProfileForm(forms.ModelForm):
 
 
 class PlumberProfileFrom(forms.ModelForm):
+    first_name=forms.CharField(widget=forms.TextInput(attrs={
+        'class':'form-control',
+        'placeholder':'Enter first_name',
+    }))
+    last_name=forms.CharField(widget=forms.TextInput(attrs={
+        'class':'form-control',
+        'placeholder':'Enter last_name',
+    }))
+    email=forms.EmailField(widget=forms.EmailInput(attrs={
+        'class':'form-control',
+        'placeholder':'Enter Email',
+    })) 
+    phone_number=forms.CharField(widget=forms.TextInput(attrs={
+        'class':'form-control',
+        'placeholder':'Enter phone_no',
+    }))           
     password=forms.CharField(widget=forms.PasswordInput(attrs={
         'class':'form-control',
         'placeholder':'Enter Password',
@@ -77,7 +99,7 @@ class PlumberProfileFrom(forms.ModelForm):
     }))
     class Meta:
         model=PlumberProfile
-        fields=['first_name','last_name','phone_number','email','password']
+        fields=['first_name','last_name','phone_number','email','role','password']
 
 
     def clean(self):

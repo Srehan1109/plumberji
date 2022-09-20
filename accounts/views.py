@@ -160,8 +160,8 @@ def plumberregister(request):
             phone_number=form.cleaned_data['phone_number']
             username=email.split('@')[0]
             password=form.cleaned_data['password']
-            # role=form.cleaned_data['role']
-            user=PlumberProfile.objects.create_user(first_name=first_name,last_name=last_name,email=email,password=password,username=username)
+            role=form.cleaned_data['role']
+            user=PlumberProfile.objects.create_user(first_name=first_name,last_name=last_name,email=email,password=password,username=username, role=role)
             
             user.phone_number=phone_number
             user.save()

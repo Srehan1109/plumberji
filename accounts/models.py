@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
 
 # Create your models here.
+class Role(models.Model):
+    role_name=models.CharField(max_length=100, default="Role")
+
 class MyAccountManager(BaseUserManager):
     def create_user(self,first_name,last_name,username,email,password=None):
         if not email:
@@ -39,7 +42,7 @@ class MyAccountManager(BaseUserManager):
     
 
 class Account(AbstractBaseUser):
-    #role=models.ForeignKey(Role,on_delete=models.CASCADE)
+    role=models.ForeignKey(Role,on_delete=models.CASCADE)
     first_name=models.CharField(max_length=100)
     last_name=models.CharField(max_length=100)
     username=models.CharField(max_length=100,unique=True)
@@ -67,8 +70,6 @@ class Account(AbstractBaseUser):
         return self.email
 
 
-# class Role(models.Model):
-#     role_name=models.CharField(max_length=100)
 
 class UserProfile(models.Model):
     user=models.OneToOneField(Account,on_delete=models.CASCADE)
@@ -87,7 +88,7 @@ class UserProfile(models.Model):
 
 #plumber registrration
 class PlumberProfile(AbstractBaseUser):
-    #role=models.ForeignKey(Role,on_delete=models.CASCADE)
+    role=models.ForeignKey(Role,on_delete=models.CASCADE)
     first_name=models.CharField(max_length=100)
     last_name=models.CharField(max_length=100)
     username=models.CharField(max_length=100,unique=True)

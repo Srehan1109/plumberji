@@ -12,16 +12,12 @@ from django.utils.encoding import force_bytes
 from django.core.mail import EmailMessage
 from django.contrib.auth.tokens import default_token_generator
 #sms
-import os
+
 from twilio.rest import Client
 
 
 
 def home(request):
-    account_sid = "AC13a27bfe95d8a0020859a9f9804be6a5"  
-    auth_token = "1799f4650b826d345383c864237929cb"
-    client = Client(account_sid,auth_token)
-    print(client)
     if request.method == 'POST':
         form = EnquiryForm(request.POST)
         print(form.errors)
@@ -37,20 +33,23 @@ def home(request):
             job_to_be_done= form.data['job_to_be_done']
             #print(job_to_be_done)
             current_site=get_current_site(request)
-            mail_subject="test email"
-            message="Hii Your Complain have register"
+            mail_subject="Email from Plumberji"
+            messages="Hii Your Complain have register"
           
             to_email=email_user
-            send_mail=EmailMessage(mail_subject,message,to=[to_email])
+            send_mail=EmailMessage(mail_subject,messages,to=[to_email])
             send_mail.send()  
             print('_______fhtshtshstr')
             #sms feature
-            message = client.messages.create(
+            acc_id="AC13a27bfe95d8a0020859a9f9804be6a5"
+            auth_token="530970117df22c46dc2697bf22170dab"
+            sms = Client(acc_id,auth_token)
+            sms_sender = sms.messages.create(
                                     body="hii this is your appointment",
-                                    from_="+16187597644",
-                                    to=sms_user,
+                                    from_= "+16187597644",
+                                    to="+917715055898",
                                 )
-            print('===============',message)
+            print('===============',sms_sender)
             print("message sent successfully")       
             return redirect('register')
 
