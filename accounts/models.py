@@ -5,6 +5,10 @@ from django.contrib.auth.models import AbstractBaseUser,BaseUserManager
 class Role(models.Model):
     role_name=models.CharField(max_length=100, default="Role")
 
+    def __str__(self):
+        return self.role_name
+    
+
 class MyAccountManager(BaseUserManager):
     def create_user(self,first_name,last_name,username,email,password=None):
         if not email:

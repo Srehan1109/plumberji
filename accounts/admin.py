@@ -10,5 +10,5 @@ class plumberProfileAdmin(admin.ModelAdmin):
 admin.site.register(PlumberProfile)
 
 class RoleAdmin(admin.ModelAdmin):
-    list_display=['role']
-admin.site.register(Role)
+    list_display=['role_name']
+admin.site.register(Role,RoleAdmin)
