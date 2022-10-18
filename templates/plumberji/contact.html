@@ -1,49 +1,77 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block contact %}
-<h1>Contact Us</h1>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<h1 class="text-info">Contact Us</h1>
 <!-- Page Content-->
+	<div class="container my-5">
+		<div class="row row-cols-1 row-cols-lg-2">
+			<div class="col">
+				<h3 class="text-info my-4">Contact Us :</h3>
+				<h2 class="faq_title">Get in Touch</h2>
+				<h6 class="faq_titles ">We realize that the only thing more pathetic than a day with no plumber is a day with a bad plumber. That’s why we’re on Call 24/7 If you wish our facilitate, we’ll get the duty done with efficiency and discretely.</h6>
+				<p class="fs-5 mt-3 text-muted">
+					Request a quote for any of our services, get to know the way to manage your current bookings on-line, get data regarding our franchise opportunities, propose Plumber Ji a business partnership or offer feedback.
+				</p>
+					<p class="faq_title fw-bold fs-6">Service Requests:<br><span class="text-muted">needhelp@company.com</span></p>
+					<p class="faq_title fw-bold fs-6">Accounts Payable & Receivable:<br><span class="text-muted">payinfo@company.com</span></p>
+					<p class="faq_title fw-bold fs-6">Sales Manager & Consulting:<br><span class="text-muted">sales@company.com </span></p>
 
-<h3>Don’t waste Time & Case – build Plumber Ji your 1st call!</h3>
-<h3>Get in Touch:</h3>
-<h3>We realize that the only thing more pathetic than a day with no plumber is a day with a bad plumber. That’s why we’re on Call 24/7 If you wish our facilitate, we’ll get the duty done with efficiency and discretely.</h3>
-<p class="fs-4 mt-3 ms-3">
-    Request a quote for any of our services, get to know the way to manage your current bookings on-line, get data regarding our franchise opportunities, propose Plumber Ji a business partnership or offer feedback.
-</p>
-<p class="fs-4 ms-4 mt-4">
-    •	Service Requests: <u>needhelp@company.com</u><br>
-    •	Accounts Payable & Receivable: <u>payinfo@company.com</u><br>
-    •	Sales Manager & Consulting: <u>sales@company.com</u>
+			</div>
+			<div class="col py-5 cont_box my-4">
+				<h4 class="faq_title">Send Message</h4>
+				<form class="row g-3 my-3">
+					<div class="col-12 my-3">
+						<input type="text" class="form-control bg-light" id="inputAddress" placeholder="Your name">
+					  </div>
+					<div class="col-12 col-md-6 my-3">
+					  <input type="email" class="form-control bg-light" id="inputEmail4" placeholder="E-mail">
+					</div>
+					<div class="col-12 col-md-6 my-3">
+					  <input type="number" class="form-control bg-light" id="inputPassword4" placeholder="number" >
+					</div>
+					<div class="col-12 my-3">
+					  <textarea name="" id="" rows="5" class="form-control w-100 bg-light" placeholder="message"></textarea>
+					</div>
+					
+					<div class="col-12 my-3">
+					  <button type="submit" class="btn contact_btn">Send Message</button>
+					</div>
+				  </form>
+			</div>
 
-</p>
-<h3>Get a Quote (Form):</h3>
-<p class="fs-4 mt-3 ms-3">
-    •	Your name<br>
-	•	Email<br>
-	•	Phone<br>
-	•	Address<br>
-	•	Service<br>
-	•	Date of Visit<br>
-	•	Time of Visit<br>
-Submit Request (Button)
-</p>
-<h3>Follow Us:</h3>
+		</div>
+	</div>
+
+<div class="container">
+	<h3 class="text-info">Follow Us:</h3>
 <p class="fs-4 mt-4 ms-3">
     •	Social Media Platforms
-</p>    
-<h3>Location we Cover:</h3>
-<p class="fs-4 mt-4 ms-3">Our multiple service locations build it straightforward to deliver prompt – Same Day Service.<br><br>
-    Working with a sure company to supply you with plumbing and HVAC services can go a long way towards helping you feel assured with the standard of the pipes, sewer lines, heating and cooling system in your Residential or Commercial areas. We are prideful to offer our services to the subsequent communities:</p>
-<p class="fs-4 mt-4 ms-5">•  City Name, Area (Format for all location)</p>
-<p class="fs-4 mt-4 ms-3">For example:</p>
-<p class="fs-4 mt-4 ms-5">•	Mumbai, Andheri</p>
-<h3>Map:</h3>
-<p class="fs-4 mt-4 ms-5">	•	Head Office<br>
-	•	Phone Numbers<br>
-	•	On the Job: 24 Hour Service - 7 Days a Week<br>365 Days
-</p>
+	<p class="fs-2 text-warning my-5"><i class="fa-brands fa-twitter"></i><span class="px-5"><i class="fa-brands fa-facebook"></i></span><span class="px-4"><i class="fa-brands fa-instagram"></i></span> <span class="px-4"><i class="fa-brands fa-whatsapp"></i></span></p>	
+</p>  
+</div>  
+
+
+<div class="container my-4">
+    <h3 class="text-info">Location we Cover:</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.3349049550893!2d73.02568585540578!3d19.16592548703639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bf6d0e5de581%3A0x7f901b6aed80537b!2sKausa%20Vegetable%20Market!5e0!3m2!1sen!2sin!4v1650268737044!5m2!1sen!2sin" style="width: 100%;" height="250" style="border:1px solid black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="row row-cols-1 row-cols-lg-3 justify-content-between">
+        <div class="col bg-light">
+            <h5 class="faq_title text-center">Head Office</h5>
+            <p class="text-center">8494 Signal Hill Road Manassas,va,<br>20110</p>
+        </div>
+        <div class="col bg-light ">
+            <h5 class="faq_title text-center">Phone Numbers:</h5>
+            <h4 class="text-center text-warning">123 456 789</h4>
+            <p class="text-center">Emergency</p>
+        </div>
+        <div class="col bg-light">
+            <h5 class="faq_title text-center">Working Time:</h5>
+            <p class="text-center">24 Hour Service - 7 Days a Wee365 Days</p>
+        </div>
+    </div>
+</div>
 
 
 {% endblock contact %}

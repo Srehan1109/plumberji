@@ -1,7 +1,7 @@
 
 from django.shortcuts import get_object_or_404, render,redirect
 from .forms import PlumberProfileFrom, RegistrationForm, UserProfileForm,UserForm
-from .models import Account,UserProfile,PlumberProfile
+from .models import Account,UserProfile,PlumberProfile,Role
 from django.contrib import messages,auth
 from django.contrib.auth.decorators import login_required
 import csv
@@ -151,18 +151,15 @@ def resetpassword(request):
 def plumberregister(request):
     if request.method=='POST':
         form=PlumberProfileFrom(request.POST)
-        print(form)
+        # print(form)
         if form.is_valid():
-
             first_name=form.cleaned_data['first_name']
             last_name=form.cleaned_data['last_name']
             email=form.cleaned_data['email']
             phone_number=form.cleaned_data['phone_number']
             username=email.split('@')[0]
             password=form.cleaned_data['password']
-            # role=form.cleaned_data['role']
             user=PlumberProfile.objects.create_user(first_name=first_name,last_name=last_name,email=email,password=password,username=username)
-            
             user.phone_number=phone_number
             user.save()
             #create a user profile
@@ -178,7 +175,6 @@ def plumberregister(request):
                 'domain':current_site,
                 'uid':urlsafe_base64_encode(force_bytes(user.pk)),
                 'token':default_token_generator.make_token(user),
-
             })
             to_email=email
             print(to_email)

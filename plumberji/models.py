@@ -5,11 +5,11 @@ from django.db import models
 
 class Enquiry(models.Model):
     job_to_be_done = models.CharField(
-        max_length=50, blank=True, null=True)
+    max_length=50, blank=True, null=True)
     first_name = models.CharField(max_length=155)
     last_name = models.CharField(max_length=155)
     contact_number = models.IntegerField()
-    email=models.EmailField(max_length=100,null=True,blank=True,unique=True)
+    email=models.EmailField(max_length=100,null=True,blank=True,unique=True )
     city = models.CharField(max_length=155)
 
     def __str__(self):

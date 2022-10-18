@@ -1,58 +1,55 @@
 {% extends 'base.html' %} {% block plumberregister %}
 <section class="section-content d-flex justify-content-center align-items-center flex-column">
   <!-- ============================ COMPONENT REGISTER   ================================= -->
-  <div class="card">
+  <div class="card bg-light my-5">
     <article class="card-body">
-      <header class="mb-4"><h4 class="card-title">For Plumber Sign up</h4></header>
+      <header class="mb-4"><h4 class="card-title text-center">For Plumber Sign up</h4></header>
       {% include 'includes/alerts.html' %}
       <form method="POST" action="{% url 'plumberregister' %}">
         {% csrf_token %}
 
-        <div class="form-row row row-cols-1 row-cols-lg-2 row-cols-md-2">
-          <div class="col form-group">
+        <div class="form-row row row-cols-1 row-cols-lg-2 bg-light">
+          <div class="col form-group my-3">
             <label>First name</label>
             {{ form.first_name }}
           </div>
           <!-- form-group end.// -->
-          <div class="col form-group">
+          <div class="col form-group my-3">
             <label>Last name</label>
             {{ form.last_name }}
           </div>
           <!-- form-group end.// -->
 
-          <div class="col form-group">
+          <div class="col form-group my-3">
             <label>Email</label>
             {{ form.email }}
-            <small class="form-text text-muted"
-              >We'll never share your email with anyone else.</small
-            >
           </div>
           <!-- form-group end.// -->
 
-          <div class="col form-group ">
+          <div class="col form-group my-3">
             <label>Phone Number</label>
             {{ form.phone_number }}
           </div>
           <!-- form-group end.// -->
 
-          <div class="col form-group ">
+          <div class="col form-group my-3">
             <label>Create password</label>
             {{ form.password }}
           </div>
           <!-- form-group end.// -->
-          <div class="col form-group">
+          <div class="col form-group my-3">
             <label>Repeat password</label>
             {{ form.confirm_password }}
           </div>
           <!-- form-group end.// -->
-          <div class="col form-group">
+          <div class="col form-group my-3">
             <label>Role</label>
             {{ form.role }}
           </div>
           
         </div>
         <!-- form-row end.// -->
-        <div class="col form-group text-center">
+        <div class="col form-group text-center my-3">
             <button type="submit" class="btn btn-primary btn-block">
               Register
             </button>
@@ -71,5 +68,10 @@
   <!-- ============================ COMPONENT REGISTER  END.// ================================= -->
 </section>
 <!-- ========================= SECTION CONTENT END// ========================= -->
-
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    element = document.getElementById('id_role')
+    element.classList.add("form-select");
+  });
+</script>
 {% endblock plumberregister %}
