@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block carts %}
+
+<section>
+    <div class="container">
+        <h4>Shopping Cart</h4>
+        <h2>YOU ARE BUYING</h2>
+        <div class="row align-items-stretch my-3">
+            <aside class="col col-lg-8">
+                <div class="card h-100 table-responsive bg-light border-2 rounded-3 py-4 container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Tap Repair</th>
+                                <th>Rs.129</th>
+                                <th><input type="number" class="form-control w-50" min="0"></th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <th>Tap Repair</th>
+                                <th>Rs.129</th>
+                                <th><input type="number" class="form-control w-50" min="0"></th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <th>Tap Repair</th>
+                                <th>Rs.129</th>
+                                <th><input type="number" class="form-control w-50" min="0"></th>
+                                <th>Total</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </aside>
+            <aside class="col col-lg-4">
+                <div class="card bg-success border-2 rounded-3">
+                    <div class="card-header border-0 bg-transparent">
+                        <h4 class="m-0 py-4 text-center border-bottom text-white">Order Summary</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row row-cols-2 px-2 text-white">
+                            <div class="col">Items : 2</div>
+                            <div class="col text-end">Rs.150</div>
+                        </div>
+                        <div class="row row-cols-2 px-2 text-white">
+                            <div class="col">GST 18%</div>
+                            <div class="col text-end">Rs.150</div>
+                        </div>
+                        <div class="row row-cols-2 px-2 mt-4 text-white">
+                            <div class="col">Total Cost</div>
+                            <div class="col text-end">Rs.300</div>
+                        </div>
+                        <div class="my-3 text-center">
+                            <button class="btn btn-outline-light">Checkout mother ficker</button>
+                        </div>
+                    </div>
+                    <div class="card-footer border-0 bg-transparent">
+                        <a href="#" class="text-decoration-none text-white fs-6">Promotion code +</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="cart_shopping">
+            <a href="#">
+                <p class="text-black fs-5 text-muted ">CONTINUE SHOPPING</p>
+            </a>
+        </div>
+        <div class="news_mail my-5 bg-light">
+            <div class="row row-cols-lg-2 row-cols-1 py-5 px-2">
+                <div class="col">
+                    <div class="news_text pe-5">
+                        <p class="w-75 m-auto">Sign up for our Newsletter and you will get weekly offers sent to you in mail</p>
+                    </div>
+                </div>
+                <div class="col text-end my-4">
+                    <div class="news_input w-75 m-auto">
+                        <div class="input-group">
+                            <input type="email" class="input-group-item  form-control" name="" id="" placeholder="Your Email">
+                            <button class="input-group-item btn btn-success" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock carts %}

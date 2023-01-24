@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'apps',
     'plumberji.apps.PlumberjiConfig',
     'crispy_forms',
     'django_browser_reload',

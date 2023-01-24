@@ -5,58 +5,123 @@
 
 {% block home %}
 <link rel="stylesheet" href="../../static/css/styles.css">
-<section class="container-fluid">
-    <div class="row row-cols-1 row-cols-lg-2 mt-5 position-relative ">
-        <div class="col text-center">
-            <div>
-                <img src="../../static/images/plumber-stamp-new.jpg" class="stamp-img img-fluid" alt="" srcset="">
+<section class="container">
+    <div class="row row-cols-1 row-cols-lg-2 mt-3 d-flex justify-content-center">
+        <div class="text-center">
+            <div class="">
                 <img src="../../static/images/rahul-plumber.png" class="img-fluid" alt="" srcset="">
             </div>
-            <h1 class="fw-bold header_para my-1">FIX ANY LEAK</h1>
-            <p class="fs-5 fw-bold text-black">Professional Plumbers at your Doorstep</p>
-            <p class="text-black fs-6">We provides fast, skilled and reliable plumbing services<br> at affordable rates.</p>
+            <p class="header_para">Fix Any Plumbing Issues</p>
+            <h1 class="title_para">Book Your Service Now</h1>
+            <p class="subtitle_para">Simple,Fast and Hassle-free Plumbing Service at your Doorstep</p>
         </div>
-        <div class="col">
-            <div class="form-resp">
-                <h6 class=" fs-3">ASK FOR A PLUMBER RIGHTAWAY</h6>
-                            <form action="" method="post" class="row row-cols-1 w-75 my-2 border border-dark rounded-3 bg-light py-3 justify-content-center align-items-center">
-                                {% csrf_token %}
-                                {{form|crispy}}
-                                <input class="btn btn-colr mt-4" type="submit" value="Submit">
-                            </form>
-                            <p class="fs-6">Please note: Rs.150/- are the home visit and inspection charges.</p>
+    </div>
+    <div class="rounded-3 order_div bg-light my-3">
+        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-3 justify-content-center bg-light w-md-100">
+            <div class="col-12 col-md-8 col-lg-8 py-3">
+                <div class="input-group">
+                    <label class="input-group-item d-block d-inline">Plumbing : </label>
+                    <select
+                        class="form-select shadow-none d-block d-md-inline input-group-item border-0 border-dark border-bottom">
+                        {% for services in service %}
+                        <option value="{{services.service_name}}">{{services.service_name}}</option>
+                        
+                        {% endfor %}
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-2 col-lg-2 py-3 text-center">
+                <label class="form-control">Price : 129</label>
+            </div>
+            <div class="col-12 col-md-2 col-lg-2 py-3 px-0 text-center">
+                <a href="#" class="btn btn-success btn-sm rounded-3">View Detail
+                </a>
             </div>
         </div>
     </div>
-</section>
-    <!-- =======Form Ends===== -->
-    <div class="">
-        <div class="header_card container my-5">
-            {% include '../includes/header_card.html'%}
+
+    <div class="container">
+        <div class="text-center my-4">
+            <a href="{% url 'something' %}" class="text-black">Click here if looking for something else</a>
         </div>
     </div>
-    <div class="p-2 container ">
-        {% include '../includes/services_card.html' %}
-    </div>
-    <div class="about_company">
-        {% include '../includes/about_company.html'%}
-    </div>
-    <div class="accordion_item">
-        {% include '../includes/our_approach.html'%}
-    </div>
-    <div class="additional_services">
-        {% include '../includes/additional_services.html'%}
-    </div>
-    <div class="container m-5 text-center p-5">
-        <h1 class="display-6">We do Just About Anything & Everything in Plumbing</h1>
+
+    <div class="container">
+        <div class="text-center">
+            <div class="">
+                <p>Form Water heaters, Drainage to Plumbing installs. We do it all.</p>
+            </div>
+        </div>
+        <div class="text-center mx-auto my-4 w-75">
+            <div class="row justify-content-around">
+                <div class="col-4 col-md-1">
+                    <img src="../../static/images/icons/sink_icon.png" alt="" class="w-75 h-50">
+                    <p>Sink & Basin</p>
+                </div>
+                <div class="col-4 col-md-1">
+                    <img src="../../static/images/icons/bathfitting.png" alt="" class="w-75 h-50">
+                    <p>Bath Fittings</p>
+                </div>
+                <div class="col-4 col-md-1">
+                    <img src="../../static/images/icons/drainagepipe.jpg" alt="" class="w-75 h-50">
+                    <p>Drainage
+                        Pipes</p>
+                </div>
+                <div class="col-4 col-md-1">
+                    <img src="../../static/images/icons/toilet.png" alt="" class="w-75 h-50">
+                    <p>Toilet</p>
+                </div>
+                <div class="col-4 col-md-1">
+                    <img src="../../static/images/icons/tap.png" alt="" class="w-75 h-50">
+                    <p>Taps</p>
+                </div>
+                <div class="col-4 col-md-1">
+                    <img src="../../static/images/icons/water tank.png" alt="" class="w-75 h-50">
+                    <p>Water
+                        Tanks</p>
+                </div>
+                <div class="col-4 col-md-1">
+                    <img src="../../static/images/icons/motor.png" alt="" class="w-75 h-50">
+                    <p>Motor</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="p-2 container ">
-        <h3 class="text-center mt-5">Happy Customers</h3>
-        {% include '../includes/testimonials.html' %}
+</section>
+<!--  -->
+
+<!-- =======Form Ends===== -->
+<!-- <div class="">
+    <div class="header_card container my-5">
+        {% include '../includes/header_card.html'%}
     </div>
-    <div class="p-5 container ">
-        {% include '../includes/home_cta.html' %}
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</div>
+<div class="p-2 container ">
+    {% include '../includes/services_card.html' %}
+</div>
+<div class="about_company">
+    {% include '../includes/about_company.html'%}
+</div>
+<div class="accordion_item">
+    {% include '../includes/our_approach.html'%}
+</div>
+<div class="additional_services">
+    {% include '../includes/additional_services.html'%}
+</div>
+<div class="container m-5 text-center p-5">
+    <h1 class="display-6">We do Just About Anything & Everything in Plumbing</h1>
+</div>
+
+<div class="p-2 container ">
+    <h3 class="text-center mt-5">Happy Customers</h3>
+    {% include '../includes/testimonials.html' %}
+</div>
+<div class="p-5 container ">
+    {% include '../includes/home_cta.html' %}
+</div> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
 {% endblock home %}

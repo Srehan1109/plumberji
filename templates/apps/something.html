@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %} 
+{% block something %}
+
+<section>
+    <div class="container">
+        <div class="row w-100 h-100">
+            <div class="col">
+                <div class="w-75 m-auto text-start">
+                    <h2 class="m-0">So, what Service are
+                        you looking for?</h2>
+
+                    <p class="my-5 fs-6 lh-base">Write to us and our representative<br>
+                        will get back to you with a solution</p>
+
+                    <p class="my-5 fs-6 lh-base">
+                        Or Call us on +919820100756, we <br>
+                        will be glad to help.
+                    </p>
+                    <div class="">
+                        <img src="../../static/images/icons/tap.png" alt="" class="mx-auto" style="width: 60px; height: 60px; border: 1px solid black; border-radius: 50px;">
+                    <a href="" class="text-black">Explore Our Services</a>
+                    </div>
+                    <p class="header_para my-5">Fix Any Plumbing Issues</p>
+                </div>
+            </div>
+            <div class="col forms-resp">
+                <div class="form-resp w-75 m-auto">
+                    <form action="" method="post"
+                    class="row row-cols-1 bg-light justify-content-center align-items-center radius">
+                    <p class=" fs-6 form_head">CALL PLUMBERJI RIGHT NOW</p>
+                        <p class="text-black fw-bold form_title">We provide fast, skilled and reliable plumbing<br>
+                            services at affordable rates.Leaky taps, messy<br>
+                            bathrooms and kitchen we fix it all.
+                        </p>
+                        {% csrf_token %}
+                        {{form|crispy}}
+                        <input class="btn btn-colr my-3 btn-sm-sm" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock something %}

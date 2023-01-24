@@ -11,13 +11,21 @@ from django.utils.http import urlsafe_base64_decode,urlsafe_base64_encode
 from django.utils.encoding import force_bytes
 from django.core.mail import EmailMessage
 from django.contrib.auth.tokens import default_token_generator
+from apps.models import Service
 #sms
 
 from twilio.rest import Client
 
 
-
 def home(request):
+    service = Service.objects.all()
+    print(service)
+    context = {
+        'service' : service
+    }
+    return render(request,'plumberji/home.html',context)
+
+def something(request):
     if request.method == 'POST':
         form = EnquiryForm(request.POST)
         print(form.errors)
@@ -58,8 +66,8 @@ def home(request):
         form=EnquiryForm()
 
     context = {'form': form}
-    template = 'plumberji/home.html'
-    return render(request, template, context)
+    template = 'apps/something.html'
+    return render(request,template, context)
 
 
 def about(request):

@@ -1,69 +1,57 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <div class="border-bottom border-2 border-dark">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a href="/" class="navbar-brand text-center py-3 mb-3">
-                <span class="fs-4 logo-text ms-5">Plumberji</span><br>
-                <!-- <span class="fs-6">Professional plumbing solutions </span> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- navbar -->
+<div class="container border-bottom border-1 border-dark">
+  <nav class="navbar navbar-expand-lg navbar-light px-md-5">
+    <div class="container-fluid">
+      <a href="/" class="navbar-brand text-center">
+        <span class="fs-4 logo-text">Plumberji</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav-dec ms-auto mb-lg-0 text-muted font_style">
+          <li class="nav-item fw-normal fs-6 mx-md-4 nav-link1">
+            <a class="text-decoration-none text-black" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item fw-normal fs-6 mx-md-4 nav-link2">
+            <a class="text-decoration-none text-black" href="{% url 'about' %}">About Us</a>
+          </li>
+          <li class="nav-item fw-normal fs-6 mx-md-4 nav-link3">
+            <a class="text-decoration-none text-black" href="{% url 'contact' %}">Contact</a>
+          </li>
+          <li class="nav-item fw-normal fs-6 mx-md-4 nav-link4">
+            <a class="text-decoration-none text-black" href="{% url 'support' %}">Services</a>
+          </li>
+          {% comment %}
+          <li class="nav-item">
+            <span class="me-3 py-2 >|</span>
+          </li>
+          {% endcomment %}
+          <li class=" nav-item fw-normal fs-6 mx-md-4 nav-link5">
+              <a class="text-decoration-none text-black" href="{% url 'login' %}">Login</a>
+          </li>
+          <li class="nav-item fw-normal fs-6 mx-md-4 nav-link6">
+            <a class="text-decoration-none text-black" href="{% url 'register' %}">Register</a>
+          </li>
+          <li class="nav-item fw-normal fs-4 mx-md-4 nav-link6">
+            <a class="text-decoration-none text-black py-2" href="{% url 'carts' %}">
+              <i class="bi bi-cart-dash"></i>
             </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dec pb-3 mb-lg-0 text-muted fw-bold">
-                <li class="nav-item nav-link1">
-                    <a class="me-3 py-2 fs-5 text-dark text-decoration-none " href="{% url 'home' %}">Home</a>
-                  </li>
-                <li class="nav-item nav-link2">
-                  <a class="me-3 py-2 fs-5 text-dark text-decoration-none " href="{% url 'about' %}">About Us</a>
-                </li>
-                <li class="nav-item nav-link3">
-                    <a class="me-3 py-2  fs-5 text-dark text-decoration-none "href="{% url 'contact' %}">Contact</a>
-                </li>
-                <li class="nav-item nav-link4">
-                    <a class="me-3 py-2 fs-5 text-dark text-decoration-none " href="{% url 'support' %}">Services</a>
-                </li>
-                {% comment %} <li class="nav-item">
-                    <span class="me-3 py-2 fs-5 text-dark">|</span>
-                </li> {% endcomment %}
-                <li class="nav-item nav-link5">
-                    <a class="me-3 py-2 fs-5 text-dark text-decoration-none " href="{% url 'login' %}">Login</a>
-                </li>
-                <li class="nav-item nav-link6">
-                    <a class="me-3 py-2 fs-5 text-dark text-decoration-none " href="{% url 'register' %}">Register</a>
-                </li>
-            </ul>
-            <div class="nav-decs">
-                <p class="fw-bold text-dark p-2 mx-3 fs-5"><i class="fa-solid fa-phone"></i>
-                    <span class="ms-2">Call : +91 9820100756</span>
-                </p>
-            </div>
-          </div>
-        </div>
-      </nav>
-</div>
-{% comment %} <header>
-    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom bg-light">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <span class="fs-4 logo-text">plumberji </span>
-            <span class="fs-6 mx-3">Professional plumbing solutions </span>
-        </a>
-
-        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto navbar-light">
-            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'about' %}">About
-                Us</a>
-            <a class="me-3 py-2 text-dark text-decoration-none"
-                href="{% url 'contact' %}">Contact</a>
-            <a class="me-3 py-2 text-dark text-decoration-none"
-                href="{% url 'support' %}">Support</a>
-            <span class="me-3 py-2 text-dark">|</span>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'login' %}">Login</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'register' %}">Register</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'logout' %}">Logout</a>
-
-
-        </nav>
-        <span class="badge rounded-pill bg-primary p-2 mx-3">
-            Call: +91 9820100756</span>
+          </li>
+        </ul>
+      </div>
     </div>
-</header> {% endcomment %}
+  </nav>
+</div>
+
+<!-- Contact Number -->
+<div class="container">
+  <div class="">
+    <h5 class="contact_style text-end m-4">Plumbing No:+91 9820100756</h5>
+  </div>
+</div>
